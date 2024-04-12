@@ -1,0 +1,51 @@
+.bannerContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+  }
+  
+  .bannerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    z-index: 1;
+  }
+  
+  .bannerContainer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Twice the width to accommodate two images */
+    height: 100%;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/010/721/512/small_2x/food-delivery-service-a-male-courier-with-a-large-backpack-illustration-concept-on-white-background-vector.jpghttps://png.pngtree.com/background/20210710/original/pngtree-orange-food-small-fresh-and-simple-white-banner-picture-image_999560.jpg"), url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-creative-hand-drawn-oranges-gradient-fruit-background-gradientfruit-backgroundminimalistic-backgroundorangehand-image_82463.jpg"); /* URL of the first and second images */
+    background-size: cover;
+    animation: slideImage 10s infinite; /* Adjust timing as needed */
+  }
+  
+  @keyframes slideImage {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .bannerContent h1 {
+      font-size: 20px;
+    }
+  
+    .bannerContent p {
+      font-size: 14px;
+    }
+  }
+  
